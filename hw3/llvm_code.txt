@@ -1,0 +1,6 @@
+target datalayout = "e-m:e-p:32:32-f64:32:64-f80:32-n8:16:32-S128"
+target triple = "i386-pc-linux-gnu"
+
+@.str = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@.str1 = private unnamed_addr constant [3 x i8] c"%f\00", align 1
+

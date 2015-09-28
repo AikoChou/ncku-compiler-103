@@ -1,0 +1,59 @@
+First
+Program             : int char double float   ε  
+DeclList            : int char double float   ε 
+DeclList'           : int char double float  
+Decl                : ; [  (  
+VarDecl             : int char double float  
+VarDecl'            : ; [ 
+FunDecl             : ( 
+VarDeclList         : int char double float   ε 
+ParamDeclList       : int char double float    ε 
+ParamDeclListTail   : int char double float   
+ParamDeclListTail'  : , ε 
+ParamDecl           : int char double float  
+ParamDecl'          : [ ε 
+Block               : { 
+Type                : int char double float 
+StmtList            : ; - !  num ( id  return break if while {  print  
+StmtList'           : ; - !  num ( id  return break if while {  print   ε 
+Stmt                : ; - !  num ( id  return break if while {  print 
+Expr                : - !  num ( id 
+ExprIdTail          : + - * / == != < <= > >= && ||  ε  ( [ = 
+ExprArrayTail       : + - * / == != < <= > >= && ||  ε  = 
+Expr'               : + - * / == != < <= > >= && ||  ε 
+ExprList            : - !  num ( id   ε 
+ExprListTail        : - !  num ( id  
+ExprListTail'       : , ε 
+UnaryOp             : - ! 
+BinOp               : + - * / == != < <= > >= && || 
+
+
+
+Follow
+Program             : $ 
+DeclList            : $ 
+DeclList'           : int char double float   $ 
+Decl                : int char double float   $ 
+VarDecl             : int char double float   ; - !  num ( id  return break if while {  print  
+VarDecl'            : int char double float   $ ; - !  num ( id  return break if while {  print  
+FunDecl             : int char double float   $ 
+VarDeclList         : ; - !  num ( id  return break if while {  print  
+ParamDeclList       : ) 
+ParamDeclListTail   : ) 
+ParamDeclListTail'  : ) 
+ParamDecl           : , ) 
+ParamDecl'          : , ) 
+Block               : int char double float   $ ; - !  num ( id  return break if while {  print   } else 
+Type                : id 
+StmtList            : } 
+StmtList'           : } 
+Stmt                : ; - !  num ( id  return break if while {  print   } else 
+Expr                : ; ) ] , 
+ExprIdTail          : ; ) ] , 
+ExprArrayTail       : ; ) ] , 
+Expr'               : ; ) ] , 
+ExprList            : ) 
+ExprListTail        : ) 
+ExprListTail'       : ) 
+UnaryOp             : - !  num ( id 
+BinOp               : - !  num ( id 
